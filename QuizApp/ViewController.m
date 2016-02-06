@@ -58,8 +58,8 @@ NSInteger questionNumber;
 
 -(void)seitoubox{
     NSInteger i = countNumber * 20;
-    NSLog(@"正答率は%ldパーセント",(long)i);
-    self.seitou.text = ([NSString stringWithFormat:@"正答率は%ldパーセント",(long)i]);
+    NSLog(@"正答率は%ldパーセントでした",(long)i);
+    self.seitou.text = ([NSString stringWithFormat:@"正答率は%ldパーセントでした",(long)i]);
   }
 
 
@@ -92,20 +92,20 @@ NSInteger questionNumber;
 
  -(IBAction)maru:(id)sender{ //◯ボタンを押した時
     if (questionNumber==1) {  //もし問題番号が1なら（答えは✕）
-    [self huseikaiaction];  //「不正解」画像を表示
-    questionNumber++; //問題数カウント+1
+        questionNumber++; //問題数カウント+1
+        [self huseikaiaction];  //「不正解」画像を表示
     }
     else if (questionNumber==2) {  //もし問題番号が2なら（答えは◯）
-        [self seikaiaction];  //「正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self seikaiaction];  //「正解」画像を表示
     }
     else if (questionNumber==3) {  //もし問題番号が3なら（答えは✕）
-        [self huseikaiaction];  //「不正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self huseikaiaction];  //「不正解」画像を表示
     }
     else if (questionNumber==4) {  //もし問題番号が4なら（答えは◯）
-        [self seikaiaction];  //「正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self seikaiaction];  //「正解」画像を表示
     }
     else if (questionNumber==5) {  //もし問題番号が4なら（答えは◯）
         [self seikaiaction];  //「正解」画像を表示
@@ -114,6 +114,7 @@ NSInteger questionNumber;
         [self.bg_r setHidden:NO];
         [self.seitou setHidden:NO];
         [self seitoubox];
+        self.view.userInteractionEnabled = NO;
         
     }
 }
@@ -121,21 +122,21 @@ NSInteger questionNumber;
 
 -(IBAction)batsu:(id)sender{//✕ボタンを押した時
     if (questionNumber==1) {  //もし問題番号が1なら（答えは✕）
-        [self seikaiaction];  //「正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self seikaiaction];  //「正解」画像を表示
     }
     
     else if (questionNumber==2) {  //もし問題番号が2なら（答えは◯）
-        [self huseikaiaction];  //「不正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self huseikaiaction];  //「不正解」画像を表示
     }
     else if (questionNumber==3) {  //もし問題番号が3なら（答えは✕）
-        [self seikaiaction];  //「正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self seikaiaction];  //「正解」画像を表示
     }
     else if (questionNumber==4) {  //もし問題番号が4なら（答えは◯）
-        [self huseikaiaction];  //「不正解」画像を表示
         questionNumber++; //問題数カウント+1
+        [self huseikaiaction];  //「不正解」画像を表示
     }
     else if (questionNumber==5) {  //もし問題番号が4なら（答えは◯）
         [self huseikaiaction];  //「不正解」画像を表示
@@ -144,6 +145,7 @@ NSInteger questionNumber;
         [self.bg_r setHidden:NO];
         [self.seitou setHidden:NO];
         [self seitoubox];
+        self.view.userInteractionEnabled = NO;
 
     }
     

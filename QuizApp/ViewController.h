@@ -18,4 +18,5 @@
 @property(nonatomic,weak) IBOutlet UIImageView *huseikai;
  @property(nonatomic,weak) IBOutlet UITextView *seitou;
 
+
 @end

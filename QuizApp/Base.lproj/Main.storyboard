@@ -59,6 +59,7 @@
                         <outlet property="mondai" destination="lbu-nm-dn1" id="BFm-xR-urw"/>
                         <outlet property="seikai" destination="ECS-bE-Byc" id="D48-73-zLE"/>
                         <outlet property="seitou" destination="gDP-Ks-Z6M" id="cob-ih-8Yb"/>
+                        <outlet property="view" destination="7m5-qK-2qd" id="pb9-7R-afe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
